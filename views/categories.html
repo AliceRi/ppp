@@ -1,0 +1,36 @@
+<div ng-controller="NavBarController">
+    <div my-customer info="courseHome"></div>
+</div>
+<div class="main">
+    <div class="sidebar">
+        <h4>Our course categories</h4>
+        <hr>
+        <div ng-repeat="x in categories">
+            <div class="sidebarElement">
+                <a href="#" scroll-to="{{x.Nome}}" duration="800" easing="easeInQuint" offset="120">{{x.Nome}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="instructorslist">
+            <div ng-repeat="x in categories">
+
+                <div id="coursesbox" class="col-lg-12">
+                    <div class="box">
+                        <hr>
+                        <h2 id="{{x.Nome}}" class="intro-text text-center">{{x.Nome}}
+                                </h2>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-8 vcenter">
+                                    <img class="img-responsive img-border img-left" src="{{ x.Icona }}" alt="">
+                                
+                                 <p>{{x.Descrizione}}</p>
+                            </div>                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
